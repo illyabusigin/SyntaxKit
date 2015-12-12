@@ -64,6 +64,9 @@
 		21F28DDB1B7AC7F8009DD1E9 /* X.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F28DDA1B7AC7F8009DD1E9 /* X.framework */; };
 		21F28DDD1B7AC802009DD1E9 /* X.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F28DDC1B7AC802009DD1E9 /* X.framework */; };
 		21F28DDF1B7AC80B009DD1E9 /* X.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F28DDE1B7AC80B009DD1E9 /* X.framework */; };
+		414874431C1C4867008BD781 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414874421C1C4867008BD781 /* Color.swift */; };
+		414874441C1C4889008BD781 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414874421C1C4867008BD781 /* Color.swift */; };
+		414874451C1C488A008BD781 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414874421C1C4867008BD781 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +141,7 @@
 		21F28DDA1B7AC7F8009DD1E9 /* X.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = X.framework; path = Carthage/Build/iOS/X.framework; sourceTree = "<group>"; };
 		21F28DDC1B7AC802009DD1E9 /* X.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = X.framework; path = Carthage/Build/Mac/X.framework; sourceTree = "<group>"; };
 		21F28DDE1B7AC80B009DD1E9 /* X.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = X.framework; path = Carthage/Build/watchOS/X.framework; sourceTree = "<group>"; };
+		414874421C1C4867008BD781 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +267,7 @@
 				211989961B2EC38B00F0D786 /* Theme.swift */,
 				210299C11B2E8924009C61EE /* Resources */,
 				210299CD1B2E8924009C61EE /* Tests */,
+				414874421C1C4867008BD781 /* Color.swift */,
 			);
 			path = SyntaxKit;
 			sourceTree = "<group>";
@@ -525,6 +530,7 @@
 				211989C01B2EC40500F0D786 /* Capture.swift in Sources */,
 				211989C31B2EC40500F0D786 /* Language.swift in Sources */,
 				211989C41B2EC40500F0D786 /* Parser.swift in Sources */,
+				414874441C1C4889008BD781 /* Color.swift in Sources */,
 				211989C11B2EC40500F0D786 /* CaptureCollection.swift in Sources */,
 				211989C71B2EC40500F0D786 /* ResultSet.swift in Sources */,
 				211989C51B2EC40500F0D786 /* Pattern.swift in Sources */,
@@ -553,6 +559,7 @@
 				211989981B2EC38B00F0D786 /* Capture.swift in Sources */,
 				2119899B1B2EC38B00F0D786 /* Language.swift in Sources */,
 				2119899C1B2EC38B00F0D786 /* Parser.swift in Sources */,
+				414874431C1C4867008BD781 /* Color.swift in Sources */,
 				211989991B2EC38B00F0D786 /* CaptureCollection.swift in Sources */,
 				2119899F1B2EC38B00F0D786 /* ResultSet.swift in Sources */,
 				2119899D1B2EC38B00F0D786 /* Pattern.swift in Sources */,
@@ -581,6 +588,7 @@
 				2198CED31B36D5DE00BD463F /* Capture.swift in Sources */,
 				2198CED61B36D5DE00BD463F /* Language.swift in Sources */,
 				2198CED71B36D5DE00BD463F /* Parser.swift in Sources */,
+				414874451C1C488A008BD781 /* Color.swift in Sources */,
 				2198CED41B36D5DE00BD463F /* CaptureCollection.swift in Sources */,
 				2198CEDA1B36D5DE00BD463F /* ResultSet.swift in Sources */,
 				2198CED81B36D5DE00BD463F /* Pattern.swift in Sources */,
