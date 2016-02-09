@@ -12,6 +12,10 @@ import Foundation
 	import UIKit
 #endif
 
+#if os(OSX)
+    import AppKit
+#endif
+
 public typealias Attributes = [String: AnyObject]
 
 public struct Theme {
