@@ -31,8 +31,7 @@ class AttributedParserTests: XCTestCase {
         let goParser = AttributedParser(language: language("Go"), theme: theme("Tomorrow"))
         
         //let string = goParser.attributedStringForString("package main\n")
-        
-        goParser.parse("package main\n") { scope, range, attributes in
+        goParser.parse("func hello() { fmt.Println(\"Hello world!\") }") { scope, range, attributes in
             print("scope = \(scope), range = \(range), attribute = \(attributes)")
         }
     }

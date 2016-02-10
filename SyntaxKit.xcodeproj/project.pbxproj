@@ -62,11 +62,13 @@
 		2198CEDB1B36D5DE00BD463F /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211989961B2EC38B00F0D786 /* Theme.swift */; };
 		2198CEDC1B36D5E100BD463F /* SyntaxKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 211989951B2EC38B00F0D786 /* SyntaxKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		21F28DDB1B7AC7F8009DD1E9 /* X.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F28DDA1B7AC7F8009DD1E9 /* X.framework */; };
-		21F28DDD1B7AC802009DD1E9 /* X.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F28DDC1B7AC802009DD1E9 /* X.framework */; };
 		21F28DDF1B7AC80B009DD1E9 /* X.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F28DDE1B7AC80B009DD1E9 /* X.framework */; };
 		414874431C1C4867008BD781 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414874421C1C4867008BD781 /* Color.swift */; };
 		414874441C1C4889008BD781 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414874421C1C4867008BD781 /* Color.swift */; };
 		414874451C1C488A008BD781 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414874421C1C4867008BD781 /* Color.swift */; };
+		B01B5A9D1C6B7FB100ED066C /* Include.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01B5A9C1C6B7FB100ED066C /* Include.swift */; };
+		B01B5A9E1C6B7FB100ED066C /* Include.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01B5A9C1C6B7FB100ED066C /* Include.swift */; };
+		B01B5A9F1C6B7FB100ED066C /* Include.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01B5A9C1C6B7FB100ED066C /* Include.swift */; };
 		B0A7C7891C6A1699002B571E /* Go.tmLanguage in Resources */ = {isa = PBXBuildFile; fileRef = B0A7C7881C6A1699002B571E /* Go.tmLanguage */; };
 		B0A7C78A1C6A1699002B571E /* Go.tmLanguage in Resources */ = {isa = PBXBuildFile; fileRef = B0A7C7881C6A1699002B571E /* Go.tmLanguage */; };
 /* End PBXBuildFile section */
@@ -144,6 +146,7 @@
 		21F28DDC1B7AC802009DD1E9 /* X.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = X.framework; path = Carthage/Build/Mac/X.framework; sourceTree = "<group>"; };
 		21F28DDE1B7AC80B009DD1E9 /* X.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = X.framework; path = Carthage/Build/watchOS/X.framework; sourceTree = "<group>"; };
 		414874421C1C4867008BD781 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		B01B5A9C1C6B7FB100ED066C /* Include.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Include.swift; sourceTree = "<group>"; };
 		B0A7C7881C6A1699002B571E /* Go.tmLanguage */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Go.tmLanguage; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -169,7 +172,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21F28DDD1B7AC802009DD1E9 /* X.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +265,7 @@
 				2119898C1B2EC38B00F0D786 /* AttributedParser.swift */,
 				2119898D1B2EC38B00F0D786 /* Capture.swift */,
 				2119898E1B2EC38B00F0D786 /* CaptureCollection.swift */,
+				B01B5A9C1C6B7FB100ED066C /* Include.swift */,
 				211989901B2EC38B00F0D786 /* Language.swift */,
 				211989911B2EC38B00F0D786 /* Parser.swift */,
 				211989921B2EC38B00F0D786 /* Pattern.swift */,
@@ -543,6 +546,7 @@
 				211989C81B2EC40500F0D786 /* Theme.swift in Sources */,
 				211989C61B2EC40500F0D786 /* Result.swift in Sources */,
 				211989BF1B2EC40500F0D786 /* AttributedParser.swift in Sources */,
+				B01B5A9E1C6B7FB100ED066C /* Include.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -572,6 +576,7 @@
 				211989A11B2EC38B00F0D786 /* Theme.swift in Sources */,
 				2119899E1B2EC38B00F0D786 /* Result.swift in Sources */,
 				211989971B2EC38B00F0D786 /* AttributedParser.swift in Sources */,
+				B01B5A9D1C6B7FB100ED066C /* Include.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,6 +606,7 @@
 				2198CEDB1B36D5DE00BD463F /* Theme.swift in Sources */,
 				2198CED91B36D5DE00BD463F /* Result.swift in Sources */,
 				2198CED21B36D5DE00BD463F /* AttributedParser.swift in Sources */,
+				B01B5A9F1C6B7FB100ED066C /* Include.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -798,6 +804,7 @@
 		2122A6F51B22B9320006409B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -823,6 +830,7 @@
 		2122A6F61B22B9320006409B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
