@@ -38,6 +38,20 @@
                BlueprintName = "SyntaxKitTests-OSX"
                ReferencedContainer = "container:SyntaxKit.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "AttributedParserTests/testParsing()">
+               </Test>
+               <Test
+                  Identifier = "LanguageTests">
+               </Test>
+               <Test
+                  Identifier = "ParserTests">
+               </Test>
+               <Test
+                  Identifier = "ThemeTests">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
       <MacroExpansion>

@@ -26,4 +26,14 @@ class AttributedParserTests: XCTestCase {
 		XCTAssertEqual(["color": "blue"] as NSDictionary, string.attributesAtIndex(19, effectiveRange: nil) as NSDictionary)
 		XCTAssertEqual(["color": "purple"] as NSDictionary, string.attributesAtIndex(25, effectiveRange: nil) as NSDictionary)
 	}
+    
+    func testGoParsing() {
+        let goParser = AttributedParser(language: language("Go"), theme: theme("Tomorrow"))
+        
+        //let string = goParser.attributedStringForString("package main\n")
+        
+        goParser.parse("package main\n") { scope, range, attributes in
+            print("scope = \(scope), range = \(range), attribute = \(attributes)")
+        }
+    }
 }

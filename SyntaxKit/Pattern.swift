@@ -32,12 +32,13 @@ final class Pattern {
 
 	// MARK: - Initializers
 
-	init?(dictionary: [NSObject: AnyObject], parent: Pattern? = nil) {
+    init?(dictionary: [NSObject: AnyObject], repo: [String: [NSObject: AnyObject]] = [String: [NSObject: AnyObject]](), parent: Pattern? = nil) {
 		self.parent = parent
 		self.name = dictionary["name"] as? String
 		self.match = dictionary["match"] as? String
 		self.begin = dictionary["begin"] as? String
 		self.end = dictionary["end"] as? String
+        
 
 		if let dictionary = dictionary["beginCaptures"] as? [NSObject: AnyObject] {
 			self.beginCaptures = CaptureCollection(dictionary: dictionary)
@@ -56,15 +57,42 @@ final class Pattern {
 		} else {
 			self.endCaptures = nil
 		}
-
-		var patterns = [Pattern]()
-		if let array = dictionary["patterns"] as? [[NSObject: AnyObject]] {
+        
+        var patterns = [Pattern]()
+        
+        // Check to see if this an include only
+        if let patternLink = PatternLink(dictionary: dictionary) {
+            if let patternData = repo[patternLink.name] {
+                if let pattern = Pattern(dictionary: patternData, repo: repo, parent: parent) {
+                    patterns.append(pattern)
+                }
+            }
+        } else if let array = dictionary["patterns"] as? [[NSObject: AnyObject]] {
+            // If we have pattern links, follow them and instantiate patterns
 			for value in array {
-				if let pattern = Pattern(dictionary: value, parent: parent) {
-					patterns.append(pattern)
-				}
+                if let link = PatternLink(dictionary: value) {
+                    
+                    if let patternData = repo[link.name] {
+                        if let pattern = Pattern(dictionary: patternData, repo: repo, parent: parent) {
+                            patterns.append(pattern)
+                        }
+                    }
+                } else {
+                    // This is just a plain old pattern, probably
+                    if let pattern = Pattern(dictionary: value, repo: repo, parent: parent) {
+                        patterns.append(pattern)
+                    }
+                }
 			}
 		}
+        
 		self.patterns = patterns
+        
+        // If name AND match is empty, return nil
+        if self.name == nil && self.match == nil && patterns.count == 0 {
+            return nil
+        }
+        
+        //guard let _ = dictionary["name"] as? String  else { return nil }
 	}
 }

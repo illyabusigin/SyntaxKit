@@ -59,6 +59,7 @@ public class Parser {
 	/// Returns new location
 	private func parse(string: String, inRange bounds: NSRange, callback: Callback) -> UInt {
 		for pattern in language.patterns {
+            var foundMatch = false
 			// Single pattern
 			if let match = pattern.match {
 				if let resultSet = parse(string, inRange: bounds, scope: pattern.name, expression: match, captures: pattern.captures) {
@@ -67,6 +68,23 @@ public class Parser {
 					continue
 				}
 			}
+            
+            
+            for pattern in pattern.subpatterns {
+                // Single pattern
+                if let match = pattern.match {
+                    if let resultSet = parse(string, inRange: bounds, scope: pattern.name, expression: match, captures: pattern.captures) {
+                        return applyResults(resultSet, callback: callback)
+                    } else {
+                        foundMatch = true
+                        continue
+                    }
+                }
+            }
+            
+            if foundMatch == true {
+                continue
+            }
 
 			// Begin & end
 			if let begin = pattern.begin, end = pattern.end {
