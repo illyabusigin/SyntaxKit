@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class Pattern {
+public final class Pattern {
     
     // MARK: - Properties
     

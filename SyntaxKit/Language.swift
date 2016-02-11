@@ -15,7 +15,7 @@ public struct Language {
     public let UUID: String
     public let name: String
     public let scopeName: String
-    let patterns: [Pattern]
+    public let patterns: [Pattern]
     
     
     // MARK: - Initializers

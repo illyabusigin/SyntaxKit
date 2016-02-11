@@ -66,6 +66,17 @@ public class Parser {
                 } else {
                     continue
                 }
+            } else {
+//                // Single pattern sub-patterns
+//                for subPattern in pattern.subpatterns {
+//                    if let match = subPattern.match {
+//                        if let resultSet = parse(string, inRange: bounds, scope: subPattern.name, expression: match, captures: subPattern.captures) {
+//                            return applyResults(resultSet, callback: callback)
+//                        } else {
+//                            continue
+//                        }
+//                    }
+//                }
             }
             
             // Begin & end
@@ -89,6 +100,31 @@ public class Parser {
                 results.addResults(endResults)
                 
                 return applyResults(results, callback: callback)
+            } else {
+//                // Single pattern sub-patterns
+//                for subPattern in pattern.subpatterns {
+//                    if let begin = subPattern.begin, end = subPattern.end {
+//                        guard let beginResults = parse(string, inRange: bounds, expression: begin, captures: subPattern.beginCaptures),
+//                            beginRange = beginResults.range else { continue }
+//                        
+//                        let location = NSMaxRange(beginRange)
+//                        let endBounds = NSMakeRange(location, bounds.length - location - bounds.location)
+//                        
+//                        guard let endResults = parse(string, inRange: endBounds, expression: end, captures: subPattern.endCaptures),
+//                            endRange = endResults.range else { /* TODO: Rewind? */ continue }
+//                        
+//                        // Add whole scope before start and end
+//                        var results = ResultSet()
+//                        if let name = subPattern.name {
+//                            results.addResult(Result(scope: name, range: NSUnionRange(beginRange, endRange)))
+//                        }
+//                        
+//                        results.addResults(beginResults)
+//                        results.addResults(endResults)
+//                        
+//                        return applyResults(results, callback: callback)
+//                    }
+//                }
             }
         }
         
